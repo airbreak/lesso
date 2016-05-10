@@ -1,0 +1,154 @@
+.size(@width: 100%,@height: 100%){
+  width: @width;
+  height: @height;
+}
+.border-radius(@r:3px){
+  border-radius: @r;
+  background-clip: padding-box;
+}
+.border-bottom(@color:#E6E6E6){
+  border-bottom: 1px solid @color;
+}
+.abs-all-zero(@top:0,@right:0,@bottom:0,@left:0){
+  position: absolute;
+  top:@top;
+  left: @left;
+  bottom: @bottom;
+  right: @right;
+}
+@color:#070807;
+@g-color:#bdbdbd;
+
+body{
+  margin: 0;
+  background: #F2F2F2;
+  max-width: 100%;
+  overflow: auto;
+}
+*{
+  -webkit-user-select: none; /*禁用手机浏览器的用户选择功能 */
+  -moz-user-select: none;
+  font-family: "Microsoft Yahei", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  -webkit-overflow-scrolling:touch;
+}
+a,a:hover,a:link,a:hover,a:active,a:visited{
+  text-decoration: none;
+  word-break: break-all;
+}
+a:focus {
+  outline:none;
+  -moz-outline:none;
+}
+input,textarea {
+  -webkit-appearance: none;
+}
+img{
+  max-width: 100%;
+}
+.btn{
+  &:active{
+    transform: scale(.8);
+  }
+}
+.font-icon{
+  display: inline-block;
+}
+.center-content{
+   width: 90%;
+   margin: 0 auto;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+  }
+}
+body{
+  .main-item{
+    margin:15px auto; 
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    .center-content {
+      width: 90%;
+      margin: 0 auto;
+    }
+   .head-txt{
+      font-size: 18px;
+      color:#444444;
+      @h:50px;
+      .size(100%,@h);
+      line-height: @h;
+    }
+    .border-bottom{
+      .border-bottom();
+    }
+
+    /*基本信息*/
+    &.basic-info{
+      .center-content{
+        height: 100%;
+        #price{
+           color: RGB(235, 85, 51);
+           font-size: 20px;
+        }
+        #current-title{
+          color:@color;
+        }
+        .otherinfo{
+          margin-top: 13px;
+          li{
+            display: inline-block;
+            color: @g-color;
+            i{
+              display: block;
+              .size(13px,13px);
+              float: left;
+            }
+            span{
+              display: block;
+              float: left;
+            }
+          }
+        }
+      }
+    }
+
+    &.org-basic-info{
+      position: relative;
+      @h:75px;
+      @p:15px;
+      .left{
+        position: absolute;
+        .size(@h+@p,@h);
+        img{
+          .border-radius(50%);
+          .size(@h,@h);
+          margin:@p @p @p 0;
+        }
+
+      }
+      .right{
+        margin-left:@h+@p;
+        padding-top: @p+5px;
+        .org-name{
+          color:RGB(33, 33, 33);
+          .name{
+            font-size: 22px;
+          }
+          
+        }
+        .nums-info{
+          margin-top: 10px;
+            li{
+              display: inline-block;
+              color: @g-color;
+              margin-right: 3px;
+            }
+          }
+      }
+    }
+
+  }
+}
