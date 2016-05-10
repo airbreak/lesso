@@ -129,3 +129,32 @@ body .main-item.org-basic-info .right .nums-info li {
   color: #bdbdbd;
   margin-right: 3px;
 }
+body .main-item.lessons-detail .head-txt {
+  border-bottom: 1px solid #e6e6e6;
+}
+body .main-item.lessons-detail ul {
+  padding-bottom: 20px;
+  margin-top: 5px;
+}
+body .main-item.lessons-detail ul li {
+  display: inline-block;
+  background-color: #FF5A00;
+  color: white;
+  border-radius: 2px;
+  background-clip: padding-box;
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  margin-right: 5px;
+  padding: 0 15px;
+  letter-spacing: 1px;
+}
+body .main-item.lessons-detail .content-txt {
+  margin-top: 15px;
+}
+body .main-item.lessons-detail .content-txt p {
+  color: #808080;
+  line-height: 25px;
+  margin-top: 0;
+}
